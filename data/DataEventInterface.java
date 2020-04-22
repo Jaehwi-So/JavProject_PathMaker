@@ -28,7 +28,6 @@ public interface DataEventInterface {
 	public void add_database(String name);	//새로운 장소 목록을 만듭니다.
 	
 	//# 장소 목록 불러오기
-	
 	//장소 목록 불러오기 메서드는 추가할 예정
 }
 

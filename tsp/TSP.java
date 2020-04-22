@@ -73,7 +73,7 @@ public class TSP {
 	}
 
 	/* 마디 정보 출력 */
-	void print_status(Node u, boolean best) {
+	public void print_status(Node u, boolean best) {
 		if (best) {
 			System.out.print("최적해 마디(최단 거리) optimal tour : ");
 			System.out.print("<");
@@ -235,7 +235,7 @@ public class TSP {
 	}
 
 	/* TSP 알고리즘 */
-	Node tsp_func(int i, int start) {
+	public Node tsp_func(int i, int start) {
 		Heap hp = new Heap();
 		Node u = new Node(n);	//히프에 삽입할 마디(가지뻗기 시도할 마디)
 		Node v = new Node(n);	//히프에서 꺼낼 마디(탐색된 마디)
@@ -255,7 +255,7 @@ public class TSP {
 		while (hp.data.size() != 0) {
 			v = new Node(n);
 			v = hp.delete_heap();	//heap에서 가장 짧은 bound(distance)의 마디를 꺼낸다.
-			print_status(v, false);
+			//print_status(v, false);
 			for (int k = 0; k <= v.i; k++) {	//현재 경로에 힙에서 꺼낸 정보를 복사
 				path[k] = v.path[k];
 				arrive[k] = v.arrive[k];
