@@ -20,7 +20,7 @@ import data.Database;
 
 public class MainGUI {
 
-	DataEvent machineD;
+	public DataEvent machineD;
 
 	//이벤트 처리에 필요한 전역변수들
 	String main_label_text = "";
@@ -41,7 +41,7 @@ public class MainGUI {
 	}
 
 	//=============새로 만들기 버튼 클릭 이벤트(새 목록 만들기 버튼 클릭 시 실행)==================
-	void create_new() {
+	void create_new(Frame fr) {
 		Font f = new Font("",Font.PLAIN, 30);
 		Frame frame = new Frame();
 
@@ -91,7 +91,7 @@ public class MainGUI {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 
-				machineD = new DataEvent();
+				machineD = new DataEvent(fr);
 				String s = text.getText();
 				machineD.add_database(s);
 				renew_label();
@@ -295,7 +295,7 @@ public class MainGUI {
 		MainGUI m = new MainGUI();
 		Frame f = new Frame("초기 화면");
 		Font font = new Font("", Font.PLAIN, 18);
-		m.machineD = new DataEvent();
+		m.machineD = new DataEvent(f);
 		f.setLayout(null);
 		f.setBounds(20, 20, 1000, 600);
 		f.setBackground(Color.lightGray);
@@ -337,7 +337,7 @@ public class MainGUI {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				System.out.println("새로 만들기");
-				m.create_new();
+				m.create_new(f);
 
 			}
 		});
@@ -346,7 +346,8 @@ public class MainGUI {
 		load.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("불러오기");
+				m.machineD.load();
+				m.renew_label();
 			}		
 		});
 

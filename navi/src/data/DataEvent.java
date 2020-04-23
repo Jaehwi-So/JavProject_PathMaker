@@ -1,17 +1,24 @@
 package data;
 
 
+import java.awt.Frame;
 import java.util.ArrayList;
 import java.util.Random;
 
+import io.DBLoad;
+import io.DBSave;
 import tsp.Node;
 import tsp.TSP;
 
 public class DataEvent implements DataEventInterface{
+	public Frame frame;
 	private Database db;
 	private ArrayList<ArrayList<Integer>> d_list = new ArrayList<>();;
 	private ArrayList<String> name_list = new ArrayList<>();;
 
+	public DataEvent(Frame f) {
+		this.frame = f;
+	}
 	public Database getDb() {
 		return db;
 	}
@@ -38,12 +45,14 @@ public class DataEvent implements DataEventInterface{
 			name_list.add(name.get(i));
 		}
 	}
-	/*
-	public void load(String path) {
-		Database db = get()
-		return db;
+	
+	//외부에서 받아온다.
+	public void load() {
+		DBLoad dl = new DBLoad();
+		Database newDB = dl.load_db(frame);
+		load_data(newDB);
 	}
-	*/
+	
 	//�뜲�씠�꽣踰좎씠�뒪�쓽 �뜲�씠�꽣瑜� 媛��졇 �샂
 	public void load_data(Database database) {
 		this.db = database;
@@ -51,16 +60,17 @@ public class DataEvent implements DataEventInterface{
 		name_list = new ArrayList<>();
 		copy_list(database.getPlaceMatrix(), database.getPlaceName());
 	}
-	/*
+	
 	public void save() {
-		save();
+		DBSave ds = new DBSave();
+		ds.save_db(this.db, frame);
 	}
-	*/
+	
 	//�뜲�씠�꽣踰좎씠�뒪�뿉 蹂�寃� �궗�빆�쓣 ���옣
 	public void save_data() {
 		this.db.setPlaceMatrix(d_list);
 		this.db.setPlaceName(name_list);
-		//save();
+		save();
 	}
 	
 	//�솗�씤�슜 print
