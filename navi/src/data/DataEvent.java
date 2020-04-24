@@ -9,13 +9,17 @@ import io.DBLoad;
 import io.DBSave;
 import tsp.Node;
 import tsp.TSP;
+import java.util.Date;
 
 public class DataEvent implements DataEventInterface{
 	public Frame frame;
 	private Database db;
 	private ArrayList<ArrayList<Integer>> d_list = new ArrayList<>();
 	private ArrayList<String> name_list = new ArrayList<>();
-	public int startPoint;
+	public int startPoint = 0;
+	long totalMilliseconds=System.currentTimeMillis();
+	long hours=totalMilliseconds/(1000L*60*60)%24;
+	long minutes=totalMilliseconds/(1000L*60)%60;
 
 	private ArrayList<ArrayList<Integer>> select_d_list;
 	private ArrayList<String> select_name_list;
@@ -25,6 +29,9 @@ public class DataEvent implements DataEventInterface{
 	}
 	public ArrayList<String> getSelect_name_list() {
 		return select_name_list;
+	}
+	public void setStartPoint(int s) {
+		this.startPoint = s;
 	}
 	public DataEvent(Frame f) {
 		this.frame = f;
@@ -193,6 +200,8 @@ public class DataEvent implements DataEventInterface{
 	}
 
 	public void run_tsp() {
+		System.out.println(hours);
+		System.out.println(minutes);
 		int adj_mat[][] = conv_arr(select_d_list);
 		int[] at = new int[adj_mat.length];
 		int[] at_type = new int[adj_mat.length];
