@@ -40,7 +40,6 @@ public class DBSave {
 
 				String path = fd.getDirectory() + fd.getFile() + ".sav";
 				//String path = "data/"+ exe.getName() + ".sav";
-				System.out.println(path);
 
 				fos = new FileOutputStream(path);
 				oos = new ObjectOutputStream(fos);

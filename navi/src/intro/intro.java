@@ -14,18 +14,18 @@ public class intro extends Thread {
 		Boolean t2 = true;
 		Frame f = new Frame();
 		
-		f.setBounds(500, 0, 1000, 1000);
+		f.setBounds(20, 20, 1000, 600);
 		ImageIcon intro1 = new ImageIcon("1.png");
 		JLabel j1 = new JLabel(intro1); //이미지 추가
-		j1.setBounds(0, 0, 1000, 1000);//인트로1 위치
+		j1.setBounds(0, 0, 800, 600);//인트로1 위치
 		
 		ImageIcon intro2 = new ImageIcon("2.png");
 		JLabel j2 = new JLabel(intro2); //이미지 추가
-		j2.setBounds(0, 0, 1000, 1000);//인트로2 위치
+		j2.setBounds(0, 0, 800, 600);//인트로2 위치
 		
 		ImageIcon intro3 = new ImageIcon("3.png");
 		JLabel j3 = new JLabel(intro3); //이미지 추가
-		j2.setBounds(0, 0, 1000, 1000);//인트로2 위치
+		j2.setBounds(300, 0, 800, 600);//인트로2 위치
 		
 		f.add(j1);
 		f.setVisible(t);
@@ -51,8 +51,13 @@ public class intro extends Thread {
 			e2.printStackTrace();
 		}
 		
-		
 		f.setVisible(true);
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 	
 		//
 	
