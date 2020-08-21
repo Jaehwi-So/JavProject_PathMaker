@@ -54,16 +54,16 @@
 
 - TSP 순회 알고리즘 패키지
 	* 최단 일주경로 도출 알고리즘으로는 TSP를 선택했다. 기본적으로 이차원 배열 형태의 인접 행렬을 기반으로 최단 일주 경로를 도출한다.   
-	<img src="/img_readme/tsp_logic.jpg" width="400" height="400"></img>
+	<img src="/img_readme/tsp_logic.jpg" width="600" height="300"></img>
 	* 알고리즘의 구현 방법으로는 최고우선 탐색을 택했다. 이는 백트래킹 기법을 사용하면서 현재 노드의 가중치를 계산하여 가장 유망한 노드를 우선적으로 탐색하고 유망하지 않다고 판단되면 백트래킹 하는 방법이다.   
-	<img src="/img_readme/tsp_java.jpg" width="400" height="400"></img>
+	<img src="/img_readme/tsp_java.jpg" width="400" height="300"></img>
 
 - 데이터 관리 패키지
 	* UI 패키지에서 받은 정보를 2차원 ArrayList로 변환
 	* 파일을 통해 길찾기 목록, 저장/불러오기 로직 수행
 	* 장소 추가, 삭제 로직 수행
 	* 목록에서 길찾기 후보 선택, TSP 실행   
-	<img src="/img_readme/data_java.jpg" width="400" height="400"></img>
+	<img src="/img_readme/data_java.jpg" width="400" height="300"></img>
 
 - 데이터 입출력 패키지
 	* ObjectStream을 통해 장소 목록 객체를 파일 형태로 저장, 불러오기 기능
@@ -78,13 +78,13 @@
 ----------------
 
 ## 4. 사용 사례
-<img src="/img_readme/ex_1.jpg" width="800" height="600"></img>        
+<img src="/img_readme/ex_1.jpg" width="600" height="400"></img>        
 
-<img src="/img_readme/ex_3.jpg" width="600" height="400"></img>
+<img src="/img_readme/ex_3.jpg" width="400" height="300"></img>
 - 로그인 화면이다.
 - 회원가입을 통해 유저등록을 할 수 있다. 이 때 아이디 중복체크를 해야 로그인이 된다.
 
-<img src="/img_readme/ex_2.jpg" width="800" height="600"></img>
+<img src="/img_readme/ex_2.jpg" width="600" height="400"></img>
 - 메인 화면이다.
 - 새 목록 만들기 : 현재 목록창을 끄고 새로운 목록창을 불러온다. 
 - 불러오기 : PC에 저장된 목록창 파일을 가져온다.
@@ -92,13 +92,13 @@
 - 장소삭제 : 목록에서 해당되는 이름의 장소를 삭제한다.
 - 길찾기 시작 : 최단 소요시간 경로를 찾는다.
 
-<img src="/img_readme/ex_4.jpg" width="800" height="600"></img>
+<img src="/img_readme/ex_4.jpg" width="600" height="400"></img>
 - 길찾기 시작을 눌렀을 때 체크목록들이다.
 1. 현재 장소목록에서 지금 방문할 장소들을 체크한다.
 2. 출발지를 선택한다.
 3. 해당 장소에서 머물 시간을 기입한다.    
 
-<img src="/img_readme/ex_5.jpg" width="600" height="400"></img>
+<img src="/img_readme/ex_5.jpg" width="400" height="300"></img>
 - 길찾기 결과창이 출력된다.
 - 경과 시간과 해당 장소들의 도착 시간, 소요 시간이 표시된다.
 
