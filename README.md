@@ -54,16 +54,16 @@
 
 - TSP 순회 알고리즘 패키지
 	* 최단 일주경로 도출 알고리즘으로는 TSP를 선택했다. 기본적으로 이차원 배열 형태의 인접 행렬을 기반으로 최단 일주 경로를 도출한다.   
-	![tsp](/img_readme/tsp_logic.jpg)
+	![tsp](/img_readme/tsp_logic.jpg width="400" height="400")
 	* 알고리즘의 구현 방법으로는 최고우선 탐색을 택했다. 이는 백트래킹 기법을 사용하면서 현재 노드의 가중치를 계산하여 가장 유망한 노드를 우선적으로 탐색하고 유망하지 않다고 판단되면 백트래킹 하는 방법이다.   
-	<img src="/img_readme/tsp_java.jpg" width="90%"></img>
+	<img src="/img_readme/tsp_java.jpg" width="400" height="400"></img>
 
 - 데이터 관리 패키지
 	* UI 패키지에서 받은 정보를 2차원 ArrayList로 변환
 	* 파일을 통해 길찾기 목록, 저장/불러오기 로직 수행
 	* 장소 추가, 삭제 로직 수행
 	* 목록에서 길찾기 후보 선택, TSP 실행   
-	![data](/img_readme/data_java.jpg)
+	![data](/img_readme/data_java.jpg width="500" height="500")
 
 - 데이터 입출력 패키지
 	* ObjectStream을 통해 장소 목록 객체를 파일 형태로 저장, 불러오기 기능
